@@ -19,12 +19,17 @@
     padding: 0;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-body);
     min-height: 100vh;
-    overflow-x: hidden;
     position: relative;
 }
 
@@ -493,6 +498,7 @@ select:focus {
     .generator-container {
         padding: 1.25rem;
         gap: 1rem;
+        box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.9);
     }
 
     #promptInput {
@@ -522,6 +528,11 @@ select:focus {
 
     .gallery-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-card {
+        box-shadow: 6px 6px 0px 0px #000;
     }
 
     /* Lightbox Mobile Adjustments */
