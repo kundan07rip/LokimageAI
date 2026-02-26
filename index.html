@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>LokimageAI - The Core Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Silkscreen&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wireframe-bg"></div>
+    <div class="blob-glow blob-1"></div>
+    <div class="blob-glow blob-2"></div>
+
+    <nav class="navbar">
+        <div class="logo">LOKIMAGE<span>AI</span></div>
+        <div class="nav-links">
+            <a href="#" class="nav-link hello">HELLO</a>
+            <a href="#" class="nav-link play active">GENERATE</a>
+            <a href="#" class="nav-link apps">GALLERY</a>
+            <a href="#" class="nav-link community">COMMUNITY</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <h1 class="headline">The open platform for AI builders.</h1>
+        <p class="subtitle">LokimageAI Core Engine. High-end AI image generation using the Pollinations API. Type a
+            prompt and our intelligent engine will automatically enhance it for maximum quality.</p>
+
+        <div class="generator-container">
+            <input type="text" id="promptInput" placeholder="Describe the image you want to see...">
+            <div class="options">
+                <select id="aspectRatio">
+                    <option value="1024x1024">Square (1024x1024)</option>
+                    <option value="1920x1080">Wallpaper (1920x1080)</option>
+                    <option value="1080x1920">Portrait (1080x1920)</option>
+                </select>
+                <button id="generateBtn" class="btn-primary">GENERATE ↗</button>
+            </div>
+        </div>
+    </main>
+
+    <section class="gallery-section">
+        <h2 class="gallery-title">RECENT GENERATIONS</h2>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Images will appear here -->
+        </div>
+    </section>
+
+    <!-- Fullscreen Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden">
+        <button class="close-btn" id="closeLightbox">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Fullscreen Image">
+        </div>
+        <div class="lightbox-controls">
+            <button id="downloadBtn" class="btn-primary lightbox-btn">DOWNLOAD ↓</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
