@@ -457,34 +457,101 @@ select:focus {
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 1.5rem;
+        padding: 1rem;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
     }
 
     .hero {
-        padding: 4rem 1.5rem 2rem;
+        padding: 2rem 1rem;
     }
 
     .headline {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        word-break: break-word;
+    }
+
+    .subtitle {
+        font-size: 1rem;
     }
 
     .generator-container {
-        padding: 1.5rem;
+        padding: 1.25rem;
+        gap: 1rem;
     }
 
-    .gallery-section {
-        padding: 2rem 1.5rem;
+    #promptInput {
+        padding: 1rem;
+        font-size: 1rem;
     }
 
     .options {
         flex-direction: column;
         align-items: stretch;
+        gap: 1rem;
+    }
+
+    select {
+        padding: 0.75rem 1rem;
     }
 
     .btn-primary {
         width: 100%;
         text-align: center;
+        padding: 1rem;
+    }
+
+    .gallery-section {
+        padding: 2rem 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Lightbox Mobile Adjustments */
+    .close-btn {
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 2.5rem;
+    }
+
+    .lightbox-content {
+        max-width: 95vw;
+        max-height: 60vh;
+    }
+
+    .lightbox-controls {
+        margin-top: 2rem;
+        width: 90vw;
+    }
+
+    #downloadBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .headline {
+        font-size: 1.8rem;
+    }
+
+    .logo {
+        font-size: 1rem;
     }
 }
