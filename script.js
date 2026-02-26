@@ -39,9 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // exact same cached image.
         const seed = Math.floor(Math.random() * 100000);
 
-        // Use the official URL schema provided by the user and documented at pollinations-ai.com/api
-        const API_KEY = "sk_jl04H4scTH2NwNSdqUjglgxmRfz7Zs3v";
-        const imageUrl = `https://gen.pollinations.ai/image/${encodedPrompt}?model=flux&width=${width}&height=${height}&seed=${seed}&nologo=true`;
+        // Call the Vercel Serverless Backend to keep the API key hidden!
+        const backendUrl = `/api/generate?prompt=${encodedPrompt}&width=${width}&height=${height}&seed=${seed}`;
 
         // Create UI Card for the Gallery
         const cardId = 'card-' + Date.now();
@@ -59,12 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Insert at the beginning of the gallery
         galleryGrid.insertAdjacentHTML('afterbegin', cardHtml);
 
-        // Fetch the image using the provided API Key via Bearer Authorization
-        fetch(imageUrl, {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${API_KEY}`
-            }
+        // Fetch the image from our internal secure backend
+        fetch(backendUrl, {
+            method: 'GET'
         })
             .then(response => {
                 if (!response.ok) {
